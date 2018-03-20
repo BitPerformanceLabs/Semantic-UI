@@ -20647,6 +20647,7 @@ ol.ui.horizontal.list li:before,
   margin: 0em 0em 1em;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  -ms-grid-row-align: center;
   align-items: center;
 }
 
@@ -23247,8 +23248,13 @@ ol.ui.horizontal.list li:before,
   -webkit-box-align: inherit;
   -ms-flex-align: inherit;
   align-items: inherit;
+<<<<<<< HEAD
   -webkit-box-orient: inherit;
   -webkit-box-direction: inherit;
+=======
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+>>>>>>> 4d4384ae4... reloaded everything
   -ms-flex-direction: inherit;
   flex-direction: inherit;
 }
@@ -30045,6 +30051,7 @@ a.ui.card:hover,
   flex-direction: row;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  -ms-grid-row-align: center;
   align-items: center;
 }
 
@@ -30064,6 +30071,7 @@ a.ui.card:hover,
   flex-direction: row;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  -ms-grid-row-align: center;
   align-items: center;
   max-width: none;
   margin: 1em 0em;

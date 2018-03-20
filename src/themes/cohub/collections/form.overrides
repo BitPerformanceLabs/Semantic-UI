@@ -1,0 +1,124 @@
+/*******************************
+         Theme Overrides
+*******************************/
+
+/* Input */
+@inputFont: @pageFont;
+@inputWidth: 100%;
+@inputFontSize: 1em;
+@inputPadding: (@inputVerticalPadding + ((1em - @inputLineHeight) / 2)) @inputHorizontalPadding;
+@inputBorder: none;
+@inputBorderRadius: none;
+@inputColor: @black;
+@inputTransition: all 0.3s cubic-bezier(.64,.09,.08,1);;
+@inputBoxShadow: 0em 0em 0em 0em transparent inset;
+
+/* Input Focus */
+@inputFocusBackground: @inputBackground;
+@inputFocusBorderColor: @focusedFormBorderColor;
+@inputFocusColor: @primaryColor;
+@inputFocusBoxShadow: none;
+@inputFocusBorderRadius: @inputBorderRadius;
+
+
+/*--------------------
+        Labels
+---------------------*/
+
+.ui.form .field > label {
+  display: block;
+  margin: @labelMargin;
+  color: @labelColor;
+  font-size: @labelFontSize;
+  font-weight: @labelFontWeight;
+  text-transform: @labelTextTransform;
+  transition: all .3s ease-in-out;
+}
+
+.ui.form input:not([type]),
+.ui.form input[type="date"],
+.ui.form input[type="datetime-local"],
+.ui.form input[type="email"],
+.ui.form input[type="number"],
+.ui.form input[type="password"],
+.ui.form input[type="search"],
+.ui.form input[type="tel"],
+.ui.form input[type="time"],
+.ui.form input[type="text"],
+.ui.form input[type="url"] {
+  font-family: @inputFont;
+  margin: 0em;
+  outline: none;
+  -webkit-appearance: none;
+  tap-highlight-color:  rgba(255, 255, 255, 0);
+
+  line-height: @inputLineHeight;
+  padding: @inputPadding;
+  font-size: @inputFontSize;
+
+  background: @inputBackground;
+  border: @inputBorder;
+  color: @inputColor;
+  border-radius: @inputBorderRadius;
+  box-shadow: @inputBoxShadow;
+  transition: @inputTransition;
+
+  border-bottom: solid @2px @lightGrey;
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+   &+ label {
+     margin-top: 4px;
+   }
+}
+
+
+/*--------------------
+        Focus
+---------------------*/
+
+.ui.form input:not([type]):focus,
+.ui.form input[type="date"]:focus,
+.ui.form input[type="datetime-local"]:focus,
+.ui.form input[type="email"]:focus,
+.ui.form input[type="number"]:focus,
+.ui.form input[type="password"]:focus,
+.ui.form input[type="search"]:focus,
+.ui.form input[type="tel"]:focus,
+.ui.form input[type="time"]:focus,
+.ui.form input[type="text"]:focus,
+.ui.form input[type="url"]:focus {
+  color: @inputFocusColor;
+  border-color: @inputFocusBorderColor;
+  border-radius: @inputFocusBorderRadius;
+  background: @inputFocusBackground;
+  box-shadow: @inputFocusBoxShadow;
+
+  &~label {
+    color: @primaryColor;
+    font-size: 1.3em;
+  }
+}
+.ui.form textarea:focus {
+  color: @textAreaFocusColor;
+  border-color: @textAreaFocusBorderColor;
+  border-radius: @textAreaFocusBorderRadius;
+  background: @textAreaFocusBackground;
+  box-shadow: @textAreaFocusBoxShadow;
+  -webkit-appearance: none;
+}
+
+/*--------------------
+     Basic Select
+---------------------*/
+
+.ui.form select {
+  display: block;
+  height: auto;
+  width: 100%;
+  background: @selectBackground;
+  border: none;
+  border-radius: @selectBorderRadius;
+  box-shadow: @selectBoxShadow;
+  padding: @selectPadding;
+  color: @selectColor;
+  transition: @selectTransition;
+}
